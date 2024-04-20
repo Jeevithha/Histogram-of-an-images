@@ -18,18 +18,17 @@ Use calcHist() function to mark the image in graph frequency for gray and color 
 The Histogram of gray scale image and color image is shown.
 ## Program:
 ```python
-# Developed By: jeevitha s
+# Developed By: jeevitha S
 # Register Number: 212222100016
 ```
-## Output:
 ### Input Grayscale Image and Color Image
 ```
 import cv2
 import matplotlib.pyplot as plt
-gray_image = cv2.imread("i1")
-color_image = cv2.imread("i3",-1)
+gray_image = cv2.imread("grayretriever.jpg")
+color_image = cv2.imread("colorretriever.jpg")
 cv2.imshow("Gray Image",gray_image)
-cv2.imshow("Colour Image",color_image)
+cv2.imshow("Color Image",color_image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
@@ -37,8 +36,8 @@ cv2.destroyAllWindows()
 ```
 import numpy as np
 import cv2
-Gray_image = cv2.imread("i1")
-Color_image = cv2.imread("i3")
+Gray_image = cv2.imread("grayretriever.jpg")
+Color_image = cv2.imread("colorretriever.jpg")
 import matplotlib.pyplot as plt
 gray_hist = cv2.calcHist([Gray_image],[0],None,[256],[0,256])
 color_hist = cv2.calcHist([Color_image],[0],None,[256],[0,256])
@@ -62,35 +61,26 @@ cv2.waitKey(0)
 ### Histogram Equalization of Grayscale Image.
 ```
 import cv2
-gray_image = cv2.imread("i1",0)
+gray_image = cv2.imread("grayretriever.jpg",0)
 cv2.imshow('Grey Scale Image',gray_image)
 equ = cv2.equalizeHist(gray_image)
 cv2.imshow("Equalized Image",equ)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
+## Output
 ### Input Grayscale Image and Color Image
-![313929229-3a270119-bcd5-47a5-8463-3e6cca2c25a1](https://github.com/Jeevithha/Histogram-of-an-images/assets/123623197/781fbb71-918f-4832-853c-4d28ad447338)
+![312320727-2033f7e1-9efc-4781-9365-bbd15c60df8e](https://github.com/Jeevithha/Histogram-of-an-images/assets/123623197/bcd1d78d-ec80-40dc-a0ba-551ba39801b9)
 
-
-![313929267-79b003ca-818e-4c33-acf4-97fa65f6b826](https://github.com/Jeevithha/Histogram-of-an-images/assets/123623197/78807470-39ea-4f86-b626-b855fc1530d9)
 
 ### Histogram of Grayscale Image and any channel of Color Image
-![313929398-1e2cc124-3ff6-46c9-8351-80af53aa3b47](https://github.com/Jeevithha/Histogram-of-an-images/assets/123623197/0402280b-e34f-481b-a411-d3ebdc014b0d)
-
-
-![313929429-4149fade-d963-499a-86fc-afe1c61352b7](https://github.com/Jeevithha/Histogram-of-an-images/assets/123623197/191898b1-afd0-47b2-b259-e56ed477e37b)
-
-
-![313929482-283beae4-da4e-45af-8a86-4f926f20c6f5](https://github.com/Jeevithha/Histogram-of-an-images/assets/123623197/4403ca4c-ff02-464e-98ec-d1602d06ffc4)
-
-
-![313929520-41a8b9da-6e55-4f99-abc0-608512a8ebed](https://github.com/Jeevithha/Histogram-of-an-images/assets/123623197/46e59035-511a-44b4-b13e-d06f294e5126)
+![312320763-e71f96d4-4362-48e1-bc1a-d98fc49ad0b4](https://github.com/Jeevithha/Histogram-of-an-images/assets/123623197/62b09b09-797f-40de-9787-e4d3724a5c24)
+![312320798-6e2c0158-651f-4b2a-8434-075d2d93eff2](https://github.com/Jeevithha/Histogram-of-an-images/assets/123623197/5e2f3100-7085-4300-beaa-6d353b8cf9e2)
+![312320842-63198d54-4290-4453-ac50-02eadd7d4f05](https://github.com/Jeevithha/Histogram-of-an-images/assets/123623197/d9ddae84-eea7-4ff7-bb2c-988653e2666a)
+![312320870-b7cd69d1-c963-46f3-a062-6ac07ed84779](https://github.com/Jeevithha/Histogram-of-an-images/assets/123623197/1bb7818c-3e4f-40ad-9e8a-f2c2c8e200f6)
 
 ### Histogram Equalization of Grayscale Image
-![313929595-221a29d2-2066-43ca-9e73-edad600ae515](https://github.com/Jeevithha/Histogram-of-an-images/assets/123623197/ee3b9a46-65ab-4266-94f9-66f8cd7b5241)
+![312320920-8f9a3340-8c48-49d7-a37b-456dab8d8acd](https://github.com/Jeevithha/Histogram-of-an-images/assets/123623197/f55385d1-d72e-4b5a-beb8-86b046d836b3)
 
-
-![Untitled](https://github.com/Jeevithha/Histogram-of-an-images/assets/123623197/99907d7a-121b-4775-8adb-e454c723d429)
 ## Result: 
 Thus the histogram for finding the frequency of pixels in an image with pixel values ranging from 0 to 255 is obtained. Also,histogram equalization is done for the gray scale image using OpenCV.
